@@ -25,6 +25,9 @@ public class City {
     @Column(name="last_update")
     private LocalDateTime lastUpdate;
 
+    @Lob
+    private byte[] image;
+
     public Long getId() {
         return id;
     }
@@ -79,5 +82,13 @@ public class City {
                 ", capital=" + capital +
                 ", lastUpdate=" + lastUpdate +
                 '}';
+    }
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
     }
 }

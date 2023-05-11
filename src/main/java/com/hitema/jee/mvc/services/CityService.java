@@ -6,4 +6,7 @@ import java.util.List;
 
 public interface CityService {
     List<City> readAll() ;
+    City getDetails(Long id);
+
+    City create(City city);
 }
