@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  mysql:
+    image: mariadb:10.11.2
+    container_name: sakila
+    working_dir: /application
+    volumes:
+      - .:/application
+      - ./db:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: java1
+      MYSQL_PASSWORD: java1
+    ports:
+      - "3307:3306"
